@@ -19,19 +19,19 @@ class Database {
     $this->conn = new mysqli($this->hostname, $this->username, $this->password, $this->dbname);
 
     if($this->conn->connect_errno){
-        //return $this->conn->connect_error;
-        echo "--failure--";
-        print_r($this->conn->connect_error);
+        return $this->conn->connect_error;
+        //echo "--failure--";
+        //print_r($this->conn->connect_error);
     }
     else{
-      //return $this->conn;
-      echo "--success--";
-      print_r($this->conn);
+      return $this->conn;
+      //echo "--success--";
+      //print_r($this->conn);
     }
   }
 
 }
 
-$db = new database();
-$db->connect();
+//$db = new database();
+//$db->connect();
  ?>
