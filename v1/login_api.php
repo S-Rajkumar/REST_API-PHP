@@ -33,7 +33,7 @@ if($_SERVER['REQUEST_METHOD'] === "POST"){
         $iss = "DRV";
         $iat = time();
         $nbf = $iat + 3;
-        $exp = $iat + 600;
+        $exp = $iat + 600; // expiry time
         $aud = "drv_volunteers";
         $user_arr_data = array(
           'id' => $user_data['user_id'],
